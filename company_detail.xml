@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#66BC7D"
+    tools:context=".CompanyDetail">
+
+    <ImageView
+        android:id="@+id/companyLogo"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/company_logo_desc" />
+
+    <!-- 기업 소개 카드뷰 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="615dp"
+        android:layout_marginTop="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/companyNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/companyDescriptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:textColor="#333333"
+                android:layout_marginTop="16dp" />
+
+            <!-- 탄소 발자국 수치 설명 -->
+            <TextView
+                android:id="@+id/carbonFootprintTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전년도 탄소 발자국 수치 그래프 입니다."
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:textColor="#FF0000" />
+
+            <!-- 그래프를 표시할 곳 -->
+            <ImageView
+                android:id="@+id/carbonFootprintGraph"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/graph1" /> <!-- 여기에 실제 그래프 이미지가 들어갑니다 -->
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

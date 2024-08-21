@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#66BC7D"
+    tools:context=".EditPost">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:src="@drawable/coco" />
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="제목"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_background"/>
+
+    <EditText
+        android:id="@+id/editTextContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="내용"
+        android:textSize="16sp"
+        android:minHeight="200dp"
+        android:background="@drawable/rounded_background"/>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_background"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#66BC7D"
+    tools:context=".CommuMain">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Post Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:contentDescription="User Image" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="익명"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="날짜"
+                    android:textColor="#B0B0B0"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <ImageButton
+                android:id="@+id/menuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_more"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="메뉴 버튼"
+                android:layout_gravity="end" />
+        </LinearLayout>
+
+        <!-- Post Title -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="제목"
+            android:textColor="#B0B0B0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Post Content -->
+        <TextView
+            android:id="@+id/textViewContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="내용"
+            android:textColor="#B0B0B0"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="16dp" />
+
+        <!-- Post Footer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="16dp">
+
+            <android.widget.Button
+                android:id="@+id/buttonRecommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추천"
+                android:textColor="@android:color/white"
+                android:background="@drawable/green_background"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/textViewRecommendCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp" />
+
+            <android.widget.Button
+                android:id="@+id/buttonComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="댓글"
+                android:textColor="@android:color/white"
+                android:background="@drawable/green_background"
+                android:padding="8dp"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/textViewCommentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Comment Section -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <!-- Comment Input -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/button_background"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:id="@+id/checkBoxAnonymous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="익명"
+                android:textColor="@android:color/white"
+                android:buttonTint="@color/black"
+                android:checked="true" />
+
+            <EditText
+                android:id="@+id/editTextComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="댓글을 입력하세요."
+                android:background="#B6F1C6"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B0B0B0"
+                android:padding="8dp" />
+
+            <ImageButton
+                android:id="@+id/buttonSubmitComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_send"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="Send Comment" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
